@@ -5,19 +5,17 @@ import { Text, Left, Body, Right, Button, ListItem, Icon } from "native-base";
 
 class CartItem extends Component {
   render() {
+    let { item } = this.props;
     return (
       <ListItem style={{ borderBottomWidth: 0 }}>
         <Left>
-          <Text style={{ color: "white", marginLeft: 16 }}>
-            {" "}
-            {this.props.item.drink}{" "}
-          </Text>
+          <Text style={{ color: "white", marginLeft: 16 }}> {item.drink} </Text>
           <Text note style={{ marginLeft: 16 }}>
-            {this.props.item.option}
+            {item.option}
           </Text>
         </Left>
         <Body>
-          <Text style={{ color: "white" }}>{this.props.item.quantity}</Text>
+          <Text style={{ color: "white" }}>{item.quantity}</Text>
         </Body>
         <Right>
           <Button transparent>
