@@ -2,12 +2,12 @@ import { decorate, observable } from "mobx";
 
 class CartStore {
   constructor() {
-    this.list = null;
+    this.items = null;
   }
 }
 
 decorate(CartStore, {
-  list: observable
+  items: observable
 });
 
 export default new CartStore();

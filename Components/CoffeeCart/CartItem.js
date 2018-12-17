@@ -5,7 +5,7 @@ import { Text, Left, Body, Right, Button, ListItem, Icon } from "native-base";
 
 class CartItem extends Component {
   render() {
-    let { item } = this.props;
+    const { item } = this.props;
     return (
       <ListItem style={{ borderBottomWidth: 0 }}>
         <Left>

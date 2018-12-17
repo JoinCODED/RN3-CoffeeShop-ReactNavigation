@@ -19,7 +19,7 @@ import {
 import styles from "./styles";
 
 //Store
-import CoffeeStore from "../../store/CoffeeStore";
+import CoffeeStore from "../../store/coffeeStore";
 
 class CoffeeDetail extends Component {
   constructor(props) {

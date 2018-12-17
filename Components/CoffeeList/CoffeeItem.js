@@ -12,7 +12,7 @@ class CoffeeItem extends Component {
     alert("Pressed");
   }
   render() {
-    let { coffeeShop } = this.props;
+    const { coffeeShop } = this.props;
     return (
       <ImageBackground
         source={{ uri: coffeeShop.background }}

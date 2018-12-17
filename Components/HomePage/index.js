@@ -19,7 +19,7 @@ class HomePage extends Component {
       <Container style={styles.transparent}>
         <View style={styles.overlay} />
         <Header style={styles.transparent} />
-        <CoffeeList />
+        <CoffeeCart />
       </Container>
     );
   }
