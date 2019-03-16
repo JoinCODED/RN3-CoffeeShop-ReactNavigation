@@ -8,9 +8,9 @@ import { ListItem, Card, CardItem, Thumbnail, Text, Left } from "native-base";
 import styles from "./styles";
 
 class CoffeeItem extends Component {
-  handlePress() {
+  handlePress = () => {
     alert("Pressed");
-  }
+  };
   render() {
     const { coffeeShop } = this.props;
     return (
@@ -19,11 +19,7 @@ class CoffeeItem extends Component {
         style={styles.background}
       >
         <View style={styles.overlay} />
-        <ListItem
-          button
-          onPress={() => this.handlePress(coffeeShop)}
-          style={styles.listitem}
-        >
+        <ListItem button onPress={this.handlePress} style={styles.listitem}>
           <Card style={styles.transparent}>
             <CardItem style={styles.transparent}>
               <Left>
