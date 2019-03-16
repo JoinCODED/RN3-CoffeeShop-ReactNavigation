@@ -5,14 +5,14 @@ import { observer } from "mobx-react";
 import { List, Content } from "native-base";
 
 // Store
-import CoffeeStore from "../../store/coffeeStore";
+import coffeeStore from "../../store/coffeeStore";
 
 // Component
 import CoffeeItem from "./CoffeeItem";
 
 class CoffeeList extends Component {
   render() {
-    const coffeeshops = CoffeeStore.coffeeshops;
+    const coffeeshops = coffeeStore.coffeeshops;
     let ListItems;
     if (coffeeshops) {
       ListItems = coffeeshops.map(coffeeShop => (

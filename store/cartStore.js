@@ -1,9 +1,7 @@
 import { decorate, observable } from "mobx";
 
 class CartStore {
-  constructor() {
-    this.items = null;
-  }
+  items = [];
 }
 
 decorate(CartStore, {

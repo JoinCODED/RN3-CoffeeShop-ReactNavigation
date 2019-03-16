@@ -6,11 +6,11 @@ import { Text, List, Button } from "native-base";
 // Component
 import CartItem from "./CartItem";
 //Store
-import CartStore from "../../store/cartStore";
+import cartStore from "../../store/cartStore";
 
 class CoffeeCart extends Component {
   render() {
-    const cartItems = CartStore.items;
+    const cartItems = cartStore.items;
     let content;
     if (cartItems) {
       content = cartItems.map(item => <CartItem item={item} key={item.id} />);
