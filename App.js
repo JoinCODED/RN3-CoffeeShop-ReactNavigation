@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import { Root, Spinner } from "native-base";
-import { Font } from "expo";
+import { Spinner } from "native-base";
 import HomePage from "./Components/HomePage";
 
 export default class App extends Component {

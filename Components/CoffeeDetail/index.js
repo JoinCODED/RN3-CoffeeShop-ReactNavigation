@@ -18,7 +18,7 @@ import {
 // Style
 import styles from "./styles";
 
-//Store
+// Store
 import coffeeStore from "../../store/coffeeStore";
 
 class CoffeeDetail extends Component {
