@@ -40,22 +40,22 @@ class CoffeeDetail extends Component {
   };
 
   render() {
-    const coffeeshops = coffeeStore.coffeeshops;
-    if (!coffeeshops) return <Content />;
-    const coffeeshop = coffeeshops[0];
+    const { cafes } = coffeeStore;
+    if (!cafes) return <Content />;
+    const cafe = cafes[0];
     return (
       <Content>
         <List>
           <ListItem style={styles.top}>
             <Left>
               <Text style={styles.text}>
-                {coffeeshop.name + "\n"}
-                <Text note>{coffeeshop.location}</Text>
+                {cafe.name + "\n"}
+                <Text note>{cafe.location}</Text>
               </Text>
             </Left>
             <Body />
             <Right>
-              <Thumbnail bordered source={{ uri: coffeeshop.img }} />
+              <Thumbnail bordered source={{ uri: cafe.img }} />
             </Right>
           </ListItem>
           <ListItem style={{ borderBottomWidth: 0 }}>

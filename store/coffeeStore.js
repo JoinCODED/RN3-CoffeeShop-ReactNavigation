@@ -2,15 +2,15 @@ import { decorate, observable } from "mobx";
 import axios from "axios";
 
 class CoffeeStore {
-  coffeeshops = null;
-  coffeeshop = null;
+  cafes = null;
+  cafe = null;
   loading = true;
 
-  fetchAllCoffeeShops = async () => {
+  fetchAllcafes = async () => {
     try {
       let res = await axios.get("http://coffee.q8fawazo.me/api/?format=json");
-      let coffeeshops = res.data;
-      this.coffeeshops = coffeeshops;
+      let cafes = res.data;
+      this.cafes = cafes;
       this.loading = false;
     } catch (err) {
       console.error(err);
@@ -19,12 +19,12 @@ class CoffeeStore {
 }
 
 decorate(CoffeeStore, {
-  coffeeshops: observable,
-  coffeeshop: observable,
+  cafes: observable,
+  cafe: observable,
   loading: observable
 });
 
 let coffeeStore = new CoffeeStore();
-coffeeStore.fetchAllCoffeeShops();
+coffeeStore.fetchAllcafes();
 
 export default coffeeStore;

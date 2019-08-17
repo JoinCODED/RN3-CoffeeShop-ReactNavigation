@@ -10,21 +10,17 @@ import coffeeStore from "../../store/coffeeStore";
 // Component
 import CoffeeItem from "./CoffeeItem";
 
-class CoffeeList extends Component {
-  render() {
-    const coffeeshops = coffeeStore.coffeeshops;
-    let shops;
-    if (coffeeshops) {
-      shops = coffeeshops.map(coffeeShop => (
-        <CoffeeItem coffeeShop={coffeeShop} key={coffeeShop.id} />
-      ));
-    }
-    return (
-      <Content>
-        <List>{shops}</List>
-      </Content>
-    );
+const CoffeeList = () => {
+  const { cafes } = coffeeStore;
+  let shops;
+  if (cafes) {
+    shops = cafes.map(cafe => <CoffeeItem cafe={cafe} key={cafe.id} />);
   }
-}
+  return (
+    <Content>
+      <List>{shops}</List>
+    </Content>
+  );
+};
 
 export default observer(CoffeeList);

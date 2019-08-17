@@ -13,16 +13,14 @@ import CoffeeCart from "../CoffeeCart";
 import CoffeeDetail from "../CoffeeDetail";
 import Login from "../Login";
 
-class HomePage extends Component {
-  render() {
-    return (
-      <Container style={styles.transparent}>
-        <View style={styles.overlay} />
-        <Header style={styles.transparent} />
-        <CoffeeCart />
-      </Container>
-    );
-  }
-}
+const HomePage = () => {
+  return (
+    <Container style={styles.transparent}>
+      <View style={styles.overlay} />
+      <Header style={styles.transparent} />
+      <Login />
+    </Container>
+  );
+};
 
 export default HomePage;
