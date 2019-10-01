@@ -18,7 +18,7 @@ const HomePage = () => {
     <Container style={styles.transparent}>
       <View style={styles.overlay} />
       <Header style={styles.transparent} />
-      <Login />
+      <CoffeeDetail />
     </Container>
   );
 };

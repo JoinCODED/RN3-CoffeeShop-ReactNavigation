@@ -18,8 +18,8 @@ import {
 // Style
 import styles from "./styles";
 
-// Store
-import coffeeStore from "../../store/coffeeStore";
+// Data
+import cafes from "../../data/cafes";
 
 class CoffeeDetail extends Component {
   state = {
@@ -40,7 +40,6 @@ class CoffeeDetail extends Component {
   };
 
   render() {
-    const { cafes } = coffeeStore;
     if (!cafes) return <Content />;
     const cafe = cafes[0];
     return (

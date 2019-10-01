@@ -4,14 +4,13 @@ import { observer } from "mobx-react";
 // NativeBase Components
 import { List, Content } from "native-base";
 
-// Store
-import coffeeStore from "../../store/coffeeStore";
-
-// Component
+//Components
 import CoffeeItem from "./CoffeeItem";
 
+// Data
+import cafes from "../../data/cafes";
+
 const CoffeeList = () => {
-  const { cafes } = coffeeStore;
   let shops;
   if (cafes) {
     shops = cafes.map(cafe => <CoffeeItem cafe={cafe} key={cafe.id} />);

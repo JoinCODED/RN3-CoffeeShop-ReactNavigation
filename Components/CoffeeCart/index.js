@@ -7,11 +7,10 @@ import { Text, List, Button } from "native-base";
 // Component
 import CartItem from "./CartItem";
 
-//Store
-import cartStore from "../../store/cartStore";
+//Data
+import items from "../../data/items";
 
 const CoffeeCart = () => {
-  const { items } = cartStore;
   let cartItems;
   if (items) {
     cartItems = items.map(item => <CartItem item={item} key={item.id} />);
