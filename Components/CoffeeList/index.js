@@ -9,6 +9,8 @@ import CoffeeItem from "./CoffeeItem";
 // Data
 import cafes from "../../data/cafes";
 
+import CartIcon from "../CartIcon";
+
 const CoffeeList = () => {
   let shops;
   if (cafes) {
@@ -22,3 +24,11 @@ const CoffeeList = () => {
 };
 
 export default CoffeeList;
+
+CoffeeList.navigationOptions = () => {
+  return {
+    title: "Coffee List",
+    headerLeft: null,
+    headerRight: <CartIcon />
+  };
+};
