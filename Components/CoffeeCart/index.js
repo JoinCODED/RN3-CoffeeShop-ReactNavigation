@@ -1,5 +1,4 @@
 import React from "react";
-import { observer } from "mobx-react";
 
 // NativeBase Components
 import { Text, List, Button } from "native-base";
@@ -26,4 +25,4 @@ const CoffeeCart = () => {
   );
 };
 
-export default observer(CoffeeCart);
+export default CoffeeCart;
